@@ -61,7 +61,7 @@ sourcesJar {
     }
 }
 
-processResources {
+tasks.withType(ProcessResources).configureEach {
     var expandProps = [
             // Project related Keys
             "version": version,
@@ -79,26 +79,12 @@ processResources {
             // Loader Keys
             "fabric_api": fabric_api,
             "fabric_loader": fabric_loader,
-            "neoforge": neoforge
-
+            "neoforge": neoforge,
+            "forge": forge
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/neoforge.mods.toml', 'META-INF/mods.toml', '*.mixins.json']) {
         expand expandProps
     }
     inputs.properties(expandProps)
-}
-
-// Declare capabilities on the outgoing configurations.
-// Read more about capabilities here: https://docs.gradle.org/current/userguide/component_capabilities.html#sec:declaring-additional-capabilities-for-a-local-component
-['apiElements', 'runtimeElements', 'sourcesElements', 'javadocElements'].each { variant ->
-    configurations."$variant".outgoing {
-        capability("$group:${project.name}:$version")
-        capability("$group:${base.archivesName.get()}:$version")
-        capability("$group:$mod_id-${project.name}-${minecraft_version}:$version")
-        capability("$group:$mod_id:$version")
-    }
-    publishing.publications.configureEach {
-        suppressPomMetadataWarningsFor(variant)
-    }
 }

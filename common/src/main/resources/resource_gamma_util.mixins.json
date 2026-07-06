@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "net.morthen.resource_gamma_util.mixins",
+    "compatibilityLevel": "JAVA_21",
+    "client": [
+        "OptionInstanceMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
+
