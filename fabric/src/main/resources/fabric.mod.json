@@ -13,13 +13,13 @@
     "icon": "icon.png",
     "environment": "*",
     "entrypoints": {
-        "client": [ "net.xstopho.resource_gamma_util.ResourceGammaUtils" ]
+        "client": [ "net.morthen.resource_gamma_util.ResourceGammaUtils" ]
     },
     "mixins": [ "${mod_id}.mixins.json", "${mod_id}.compat.mixins.json" ],
     "depends": {
         "fabric-api": ">=${fabric_api}",
         "fabricloader": ">=${fabric_loader}",
-        "minecraft": ">=26.1 <=${minecraft_version}",
+        "minecraft": "${minecraft_version}",
         "java": ">=${java_version}"
     }
 }
