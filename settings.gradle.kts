@@ -14,6 +14,6 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "Multiloader-Template"
+rootProject.name = "Resource-Gamma-Utils"
 
 listOf("common", "fabric", "forge", "neoforge").forEach(::include)
