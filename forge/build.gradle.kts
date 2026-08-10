@@ -19,3 +19,10 @@ multiloader {
         "issues_url" to providers.gradleProperty("issues_url")
     ))
 }
+tasks.named<JavaCompile>("compileJava") {
+    exclude("**/compat/**")
+}
+
+tasks.named<Jar>("sourcesJar") {
+    exclude("**/compat/**")
+}

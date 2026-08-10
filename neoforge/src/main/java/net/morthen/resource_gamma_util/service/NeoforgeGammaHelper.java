@@ -1,12 +1,13 @@
 package net.morthen.resource_gamma_util.service;
 
 import net.irisshaders.iris.api.v0.IrisApi;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 
 public class NeoforgeGammaHelper implements IGammaHelper {
     @Override
     public boolean isModLoaded(String modId) {
-        return FMLLoader.getCurrent().getLoadingModList().getModFileById(modId) != null;
+        return ModList.get().isLoaded(modId);
     }
 
     @Override
