@@ -33,13 +33,4 @@ public class GammaConstants {
             } else gammaEnabled = !gammaEnabled;
         }
     }
-
-    public static boolean isIrisLoaded() {
-        try {
-            Class.forName("net.irisshaders.iris.Iris", false, GammaConstants.class.getClassLoader());
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        }
-    }
 }

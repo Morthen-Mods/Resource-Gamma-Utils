@@ -13,7 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(OptionInstance.class)
 public class OptionInstanceMixin<T> {
 
-    @Shadow @Final Component caption;
+    @Shadow @Final
+    private Component caption;
 
     @Inject(method = "get", at = @At("HEAD"), cancellable = true)
     public void resource_gamma_util$set(CallbackInfoReturnable<T> cir) {

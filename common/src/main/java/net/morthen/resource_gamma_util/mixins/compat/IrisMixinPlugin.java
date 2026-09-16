@@ -13,7 +13,7 @@ public class IrisMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        return GammaConstants.isIrisLoaded();
+        return GammaService.isIrisLoaded();
     }
 
     @Override
