@@ -1,5 +1,6 @@
 package net.morthen.resource_gamma_util.mixins.compat;
 
+import net.morthen.resource_gamma_util.GammaConstants;
 import net.morthen.resource_gamma_util.service.GammaService;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
@@ -12,7 +13,7 @@ public class IrisMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        return GammaService.isModLoaded("iris");
+        return GammaConstants.isIrisLoaded();
     }
 
     @Override

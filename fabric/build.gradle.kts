@@ -24,6 +24,6 @@ multiloader {
 }
 
 dependencies {
-    implementation("com.terraformersmc:modmenu:20.0.1")
-    compileOnly("maven.modrinth:iris:1.11.2+26.2-fabric")
+    implementation("com.terraformersmc:modmenu:21.0.0-beta.1")
+    compileOnly("maven.modrinth:iris:1.11.6+26.3-fabric")
 }

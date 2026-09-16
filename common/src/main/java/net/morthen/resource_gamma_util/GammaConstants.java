@@ -1,5 +1,6 @@
 package net.morthen.resource_gamma_util;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -7,7 +8,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.morthen.resource_gamma_util.service.GammaService;
-import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +17,7 @@ public class GammaConstants {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 
     private static final KeyMapping.Category CATEGORY = new KeyMapping.Category(Identifier.fromNamespaceAndPath(MOD_ID, "main"));
-    public static final KeyMapping TOGGLE = new KeyMapping(MOD_ID + ".key.toggle", GLFW.GLFW_KEY_H, CATEGORY);
+    public static final KeyMapping TOGGLE = new KeyMapping(MOD_ID + ".key.toggle", InputConstants.KEY_H, CATEGORY);
 
     public static final Double customGamma = 1500D;
     public static boolean gammaEnabled = false;
@@ -31,6 +31,15 @@ public class GammaConstants {
                 if (p.hasEffect(MobEffects.NIGHT_VISION)) p.removeEffect(MobEffects.NIGHT_VISION);
                 else p.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, -1));
             } else gammaEnabled = !gammaEnabled;
+        }
+    }
+
+    public static boolean isIrisLoaded() {
+        try {
+            Class.forName("net.irisshaders.iris.Iris", false, GammaConstants.class.getClassLoader());
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
         }
     }
 }
