@@ -7,7 +7,7 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.morthen.resource_gamma_util.service.GammaService;
+import net.morthen.resource_gamma_util.utils.IrisUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,7 @@ public class GammaConstants {
 
     public static void useHotkey(Minecraft client) {
         if (TOGGLE.consumeClick()) {
-            boolean shader = GammaService.isShaderEnabled();
+            boolean shader = IrisUtils.isShaderEnabled();
             LocalPlayer p = client.player;
 
             if (shader) {
