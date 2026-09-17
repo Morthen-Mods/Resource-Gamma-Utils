@@ -1,3 +1,3 @@
-#### 2.0.1
-  - update to 26.3
-  - fixing a crash on fabric
+#### 2.0.2
+  - fixing mixin issues by replacing the compat plugin with java reflect
+  - add missing translations

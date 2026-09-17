@@ -3,9 +3,10 @@
   "minVersion": "0.8",
   "package": "net.morthen.resource_gamma_util.mixins",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [ "OptionInstanceMixin" ],
-  "server": [],
+  "client": [
+    "OptionInstanceMixin",
+    "compat.IrisMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
