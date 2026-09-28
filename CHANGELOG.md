@@ -1,3 +1,3 @@
 #### 2.0.2
-  - updating forge version
-  - split mixins between mod and compat mixins
+  - fixing mixin issues by replacing the compat plugin with java reflect
+  - add missing translations
