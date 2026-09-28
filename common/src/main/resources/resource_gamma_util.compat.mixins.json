@@ -2,10 +2,11 @@
   "required": true,
   "minVersion": "0.8",
   "package": "net.morthen.resource_gamma_util.mixins",
-  "plugin": "net.morthen.resource_gamma_util.mixins.compat.IrisMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
-  "client": [ "compat.IrisMixin" ],
+  "client": [
+    "compat.IrisMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
@@ -14,3 +15,4 @@
     "requireAnnotations": true
   }
 }
+

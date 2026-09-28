@@ -4,7 +4,9 @@
   "package": "net.morthen.resource_gamma_util.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
-  "client": [ "OptionInstanceMixin" ],
+  "client": [
+    "OptionInstanceMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

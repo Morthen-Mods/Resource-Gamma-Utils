@@ -1,3 +1,3 @@
-#### 2.0.1
-  - update to 26.3
-  - fixing a crash on fabric
+#### 2.0.2
+  - updating forge version
+  - split mixins between mod and compat mixins

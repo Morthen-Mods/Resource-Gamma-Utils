@@ -17,4 +17,4 @@ plugins {
 rootProject.name = "Resource-Gamma-Utils"
 
 listOf("common", "fabric", "neoforge").forEach(::include)
-//include("forge")
+include("forge")
