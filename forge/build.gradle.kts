@@ -21,8 +21,10 @@ multiloader {
 }
 tasks.named<JavaCompile>("compileJava") {
     exclude("**/compat/**")
+    exclude("**/utils/**")
 }
 
 tasks.named<Jar>("sourcesJar") {
     exclude("**/compat/**")
+    exclude("**/utils/**")
 }
