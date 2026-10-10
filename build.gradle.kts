@@ -7,7 +7,7 @@ plugins {
     id("net.minecraftforge.gradle") version "7.0.40" apply false
     id("net.neoforged.moddev") version "2.0.147" apply false
 
-    id("me.modmuss50.mod-publish-plugin") version "2.2.0" apply false
+    id("me.modmuss50.mod-publish-plugin") version "2.2.1" apply false
 }
 
 subprojects {
